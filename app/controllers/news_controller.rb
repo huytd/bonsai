@@ -3,7 +3,7 @@ require 'open-uri'
 
 class NewsController < ApplicationController
   def index
-      @news = News.all
+      @news = News.order('created_at DESC').all
   end
 
   def show
