@@ -3,7 +3,7 @@
     <% @news.each do |item| %>
         <div class="news-item panel row">
             <div class="left-content col-xs-8">
-                <h3 class="title"><%= link_to item.title, item.url %></h3>
+                <h3 class="title"><%= link_to item.title, item.url, :target => '_blank' %></h3>
                 <div class="desc"><%= item.description %></div>
                 <div class="info row">
                     <div class="author col-xs-6">
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right-content col-xs-4"><%= holder_tag '100px150' %></div>
+            <div class="right-content col-xs-4"><%= link_to (holder_tag '100px150'), item.url, :target => '_blank' %></div>
         </div>
     <% end %>
     </div>
