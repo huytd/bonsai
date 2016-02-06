@@ -1,6 +1,69 @@
-<h1>Tin tức</h1>
-<ul>
-<% @news.each do |item| %>
-    <li><%= link_to item.title, item %></li>
-<% end %>
-</ul>
+<div class="row">
+    <div class="left col-xs-10">
+    <% @news.each do |item| %>
+        <div class="news-item panel row">
+            <div class="left-content col-xs-8">
+                <h3 class="title"><%= link_to item.title, item.url %></h3>
+                <div class="desc"><%= item.description %></div>
+                <div class="info row">
+                    <div class="author col-xs-6">
+                        <div class="media">
+                          <div class="media-left">
+                            <a href="#">
+                                <%= holder_tag '44x44', '', 'gray', id: '', class: 'media-object' %>
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <h5 class="media-heading"><b><%= ['Huy Trần', 'Minhitech', 'Phúc Thái', 'Bình Nguyễn'].sample %></b></h5>
+                            <%= ['Lá cải viên', 'Chuyên gia chém gió', 'Chuyên viên tình báo', 'Dư luận viên', 'Người đưa tin vịt', 'Siêu nhân bàn phím', 'Thánh phồng tôm'].sample %>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="meta col-xs-6">
+                        Nguồn: <%= ['Vnexpress', 'Vietnamnet', 'Thanh Niên Online', 'Thiên Địa Hội', 'Kênh 14', 'Mương số 7', 'Pháp sư', 'BBC', 'Đài Châu Á Tự Do', 'Web Trẻ Thơ', 'VozForum'].sample %><br/>
+                        Cách đây <%= ['1 tiếng', '15 phút', '2 ngày', 'rất nhiều ngày', '1 năm trước', '20 phút', '50 phút', '30 phút', '5 phút', '45 phút', 'vài giờ'].sample %>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content col-xs-4"><%= holder_tag '100px150' %></div>
+        </div>
+    <% end %>
+    </div>
+    <div class="right col-xs-2">
+        <h4>ĐỌC CÁI GÌ</h4>
+        <div class="category-list list-group">
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-group"></span>
+              Xã hội
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-globe"></span>
+              Khoa học
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-star-full-outline"></span>
+              Chính trị
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-chart-line"></span>
+              Kinh tế
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-globe"></span>
+              Quốc tế
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-stopwatch"></span>
+              Thể thao
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-weather-partly-sunny"></span>
+              Thời tiết
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-coffee"></span>
+              Giải trí
+          </a>
+        </div>
+    </div>
+</div>

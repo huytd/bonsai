@@ -1,3 +1,56 @@
 // Place all the styles related to the News controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.right {
+    margin-top: 40px;
+    .category-list {
+        .category-item {
+            position: relative;
+            padding-left: 44px;
+            border: none;
+            border-bottom: 1px dotted #90BA0A;
+            margin-bottom: 5px;
+
+            .category-icon {
+                position: absolute;
+                width: 30px; height: 30px;
+                background: #DDD;
+                line-height: 28px; text-align: center;
+                font-size: 18px;
+                top: 5px; left: 5px;
+                border-radius: 15px;
+            }
+        }
+    }
+
+}
+
+.left {
+    padding: 0 !important;
+    .news-item {
+        margin: 30px;
+        margin-left: 0;
+        padding-bottom: 15px;
+        padding-top: 15px;
+
+        .left-content {
+            .title {
+                margin-top: 0;
+            }
+
+            .desc {
+                text-align: justify;
+            }
+
+            .info {
+                margin-top: 10px;
+
+                .meta {
+                    text-align: right;
+                    color: #AAA;
+                }
+            }
+        }
+    }
+}

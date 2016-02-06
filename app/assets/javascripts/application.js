@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require holder
 //= require_tree .
+
+$(document).bind('page:change', function(){
+    Holder.run();
+});

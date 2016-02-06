@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+html, body {
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Open Sans";
+}
+
+.container {
+    width: 960px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.header-background {
+    background: #D5D5D5;
+
+    .header {
+        padding: 10px;
+
+        .logo {
+            span {
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.top-news-background {
+    background: #DFDFDF;
+    padding: 10px;
+
+    .news-box {
+        padding: 2px;
+        position: relative;
+
+        a {
+            span {
+                position: absolute;
+                left: 0; bottom: 0;
+                z-index: 2;
+                padding: 10px; width: 100%;
+                box-sizing: border-box;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.top-keywords-background {
+    background: #EEE;
+
+    .top-keywords {
+        padding: 10px;
+
+        .hot-keywords {
+            font-size: 20px;
+        }
+    }
+}
