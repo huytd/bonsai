@@ -51,6 +51,18 @@
                     color: #AAA;
                 }
             }
+
+            .social {
+                color: #888;
+                margin-top: 10px;
+                .counter-icon {
+                    font-size: 18px;
+                }
+                .counter-label {
+                    margin-right: 10px;
+                    margin-left: 3px;
+                }
+            }
         }
     }
 }

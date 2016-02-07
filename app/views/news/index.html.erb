@@ -3,7 +3,7 @@
     <% @news.each do |item| %>
         <div class="news-item panel row">
             <div class="left-content col-xs-8">
-                <h3 class="title"><%= link_to item.title, item.url, :target => '_blank' %></h3>
+                <h3 class="title"><%= link_to item.title, item %></h3>
                 <div class="desc"><%= item.description %></div>
                 <div class="info row">
                     <div class="author col-xs-6">
@@ -24,8 +24,17 @@
                         Cách đây <%= ['1 tiếng', '15 phút', '2 ngày', 'rất nhiều ngày', '1 năm trước', '20 phút', '50 phút', '30 phút', '5 phút', '45 phút', 'vài giờ'].sample %>
                     </div>
                 </div>
+                <div class="social row">
+                    <div class="col-xs-10">
+                        <span class="counter-icon typcn typcn-heart-outline"></span><span class="counter-label like">10</span>
+                        <span class="counter-icon typcn typcn-messages"></span><span class="counter-label comment">50</span>
+                        <span class="counter-icon typcn typcn-watch"></span><span class="counter-label read">Cần <b><%= [1, 5, 10, 15].sample %></b> phút để đọc</span>
+                    </div>
+                    <div class="col-xs-2">
+                    </div>
+                </div>
             </div>
-            <div class="right-content col-xs-4"><%= link_to (holder_tag '100px150'), item.url, :target => '_blank' %></div>
+            <div class="right-content col-xs-4"><%= link_to (holder_tag '100px150'), item %></div>
         </div>
     <% end %>
     </div>
@@ -63,6 +72,30 @@
           <a href="#" class="category-item list-group-item">
               <span class="category-icon pull-left typcn typcn-coffee"></span>
               Giải trí
+          </a>
+        </div>
+        <br/>
+        <h4>ĐỌC BAO LÂU?</h4>
+        <div class="category-list list-group">
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-watch"></span>
+              5 phút
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-watch"></span>
+              10 phút
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-watch"></span>
+              15 phút
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-watch"></span>
+              20 phút
+          </a>
+          <a href="#" class="category-item list-group-item">
+              <span class="category-icon pull-left typcn typcn-watch"></span>
+              Thoải mái luôn
           </a>
         </div>
     </div>
