@@ -12,7 +12,7 @@ class NewsController < ApplicationController
 
   def do_like
       @feed = News.find(params[:id])
-      @feed.do_like()
+      Like.create({ :user_id => "", :news_id => @feed.id })
       render :json => @feed.get_likes()
   end
 end

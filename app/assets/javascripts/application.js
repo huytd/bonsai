@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require holder
+//= require react
+//= require react_ujs
 //= require_tree .
 
 $(document).bind('page:change', function(){

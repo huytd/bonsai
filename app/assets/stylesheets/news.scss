@@ -26,13 +26,15 @@
 
 }
 
+$news-item-padding: 15px;
+
 .left {
     padding: 0 !important;
     .news-item {
         margin: 30px;
         margin-left: 0;
-        padding-bottom: 15px;
-        padding-top: 15px;
+        padding-bottom: $news-item-padding;
+        padding-top: $news-item-padding;
 
         .left-content {
             .title {
@@ -70,6 +72,7 @@
 
                 .media {
                     background: #FAFAFA;
+                    margin-bottom: 5px;
                 }
             }
         }

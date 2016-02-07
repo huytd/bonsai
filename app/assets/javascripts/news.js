@@ -11,6 +11,6 @@ $(document).ready(function(){
     });
 
     $(".counter-icon.comment").on("click", function(){
-        
+
     });
 });

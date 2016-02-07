@@ -35,7 +35,9 @@
                 </div>
                 <div class="comments row">
                     <div class="comment-list col-xs-12">
-
+                        <% item.get_comments().each do |comment| %>
+                        <%= react_component('CommentBox', username: comment.username, message: comment.message) %>
+                        <% end %>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ class News < ActiveRecord::Base
         return Like.where([ "news_id = :n", { n: self.id } ]).length
     end
 
-    def do_like
-        Like.create({ :user_id => "", :news_id => self.id })
+    def get_comments
+        return Comment.where([ "news_id = :n", { n: self.id } ])
     end
 end
