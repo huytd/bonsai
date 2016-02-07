@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :news, :only => [:index, :show]
+  post 'news/:id/like', :controller => "news", :action => "do_like"
 
   root 'news#index'
 

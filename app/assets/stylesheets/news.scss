@@ -57,10 +57,19 @@
                 margin-top: 10px;
                 .counter-icon {
                     font-size: 18px;
+                    cursor: pointer;
                 }
                 .counter-label {
                     margin-right: 10px;
                     margin-left: 3px;
+                }
+            }
+
+            .comments {
+                margin-top: 10px;
+
+                .media {
+                    background: #FAFAFA;
                 }
             }
         }

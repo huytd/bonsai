@@ -26,11 +26,16 @@
                 </div>
                 <div class="social row">
                     <div class="col-xs-10">
-                        <span class="counter-icon typcn typcn-heart-outline"></span><span class="counter-label like">10</span>
-                        <span class="counter-icon typcn typcn-messages"></span><span class="counter-label comment">50</span>
+                        <span rel="<%= item.id %>" class="counter-icon like typcn typcn-heart-outline"></span><span rel="<%= item.id %>" class="counter-label like"><%= item.get_likes() %></span>
+                        <span class="counter-icon comment typcn typcn-messages"></span><span class="counter-label comment">50</span>
                         <span class="counter-icon typcn typcn-watch"></span><span class="counter-label read">Cần <b><%= [1, 5, 10, 15].sample %></b> phút để đọc</span>
                     </div>
                     <div class="col-xs-2">
+                    </div>
+                </div>
+                <div class="comments row">
+                    <div class="comment-list col-xs-12">
+
                     </div>
                 </div>
             </div>
