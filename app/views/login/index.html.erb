@@ -1,0 +1,56 @@
+<div class="container">
+  <center>
+    <center class="login-form">
+      <center>
+        <img src="/assets/slash2.png" class="login-img"/>
+        </center>
+      <br />
+      <a href="<%= user_omniauth_authorize_path(:facebook) %>" class="bt-link">
+          <div class="media-button">
+            <div class="media">
+              <div class="media-left">
+                <img src="/assets/facebook-icon.ico" class="media-button-img">
+              </div>
+              <div class="media-body">
+                <center>
+                    <h5 class="media-heading media-button-text"><b>Đăng nhập với Facebook</b></h5>
+                </center>
+              </div>
+            </div>
+          </div>
+      </a>
+      <p>
+        <center>
+            <h4 class="or-text">Hoặc</h4>
+        </center>
+      </p>
+      <p>
+        <input type="text"
+               name="user[email]"assets
+               required="required"
+               placeholder="Email"
+               class="login-input"
+               ref="userEmailInput" />
+      </p>
+      <p>
+        <input type="password"
+               name="user[password]"
+               required="required"
+               placeholder="Password"
+               class="login-input"
+               ref="userPasswordInput" />
+      </p>
+      <p>
+        <input type="submit"
+               value="Login"
+               class="btn login-btn"
+               onClick={} />
+      </p>
+     <br />
+      <p class="signup-link">
+        Tham gia cùng chúng tôi?&ensp;
+        <a href="/user/signup">Đăng ký</a>
+      </p>
+    </center>
+  </center>>
+</div>

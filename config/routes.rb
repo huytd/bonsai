@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  get 'login/index'
+
+  devise_for :users,  :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  get 'home/index'
+
   resources :news, :only => [:index, :show]
   post 'news/:id/like', :controller => "news", :action => "do_like"
+
+  get "news", to: "news#index", as: "user_root"
 
   root 'news#index'
 

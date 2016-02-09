@@ -1,4 +1,7 @@
-<div class="row">
+<%= render "layouts/header" %>
+<%= render "layouts/hot_slide" %>
+<div class="container">
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
     <div class="left col-xs-10">
     <% @news.each do |item| %>
         <div class="news-item panel row">

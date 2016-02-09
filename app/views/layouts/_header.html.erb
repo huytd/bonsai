@@ -2,69 +2,43 @@
     <div class="header container">
         <div class="row row-eq-height">
             <div class="logo col-xs-2">
-                <span class="typcn typcn-leaf"></span><span>cải</span>
+                <span><img src="/assets/logo-small.png" class="header-icon"><span>POONSAI</span></img></span>
             </div>
-            <div class="search-box col-xs-8">
+            <div class="search-box col-xs-7">
                 <div class="form-group has-feedback">
-                    <input type="text" placeholder="Tìm kiếm..." class="form-control">
+                    <input type="text" placeholder="Tìm kiếm..." class="form-control search-textbox">
                   <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
-            <div class="col-xs-2">
-                <button class="btn btn-block btn-primary">Đăng bài</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="top-news-background container-fluid">
-    <div class="row">
-        <div class="news-box col-xs-3">
-            <a href="#">
-              <%= holder_tag '100px160' %>
-              <span>Cách chức Tổng Giám đốc Công ty cổ phần Vận tải đường sắt Hà Nội</span>
-            </a>
-        </div>
-        <div class="news-box col-xs-3">
-            <a href="#">
-              <%= holder_tag '100px160' %>
-              <span>Ông Đinh La Thăng: Toàn tâm trí tôi giờ dành cho việc duy nhất</span>
-            </a>
-        </div>
-        <div class="news-box col-xs-3">
-            <a href="#">
-              <%= holder_tag '100px160' %>
-              <span>Thần tượng Bolero 2016: Hotgirl Gia Lai làm "dậy sóng" ghế nóng</span>
-            </a>
-        </div>
-        <div class="news-box col-xs-3">
-            <a href="#">
-              <%= holder_tag '100px160' %>
-              <span>Biệt đội giải cứu 'cá cảm tử' trong ngày cúng ông Táo</span>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="top-keywords-background container-fluid">
-    <div class="top-keywords container">
-        <div class="row">
-            <div class="col-xs-2"><b>ĐANG HOT <i class="hot-keywords typcn typcn-volume-up"></i></b></div>
-            <div class="col-xs-10">
-                <ul class="list-inline">
-                    <li><a href="#">Hường Hana</a><li>
-                    <li><a href="#">Hari Won</a><li>
-                    <li><a href="#">Đinh La Thăng</a><li>
-                    <li><a href="#">Trấn Thành</a><li>
-                    <li><a href="#">Cúng ông Táo</a><li>
-                    <li><a href="#">Bầu cử thủ tướng</a><li>
-                    <li><a href="#">Bộ chính trị</a><li>
-                    <li><a href="#">BMW i8</a><li>
-                    <li><a href="#">Thách thức danh hài</a><li>
-                    <li><a href="#">Linh Miu</a><li>
-                    <li><a href="#">Virus Zika</a><li>
-                    <li><a href="#">Giá xăng dầu</a><li>
-                    <li><a href="#">Ngày tình bạn</a><li>
-                    <li><a href="#">Facebook</a><li>
-                </ul>
+            <div class="col-xs-3">
+
+                 <button class="btn btn-success">Đăng bài</button> &ensp;&ensp;
+              <span id="user-info" >
+                <% if user_signed_in? %>
+
+
+
+                    <span class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Home<b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+
+                        <li><a href=""><%= current_user.name %></a></li>
+
+                        <li class="divider"></li>
+                        <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete  %></li>
+
+                      </ul>
+                    </span>
+
+
+                <% else %>
+                    <%= link_to "Sign in", {:controller => 'login',:action =>'index'} %>
+                <% end %>
+              </span>
+
+
             </div>
         </div>
     </div>
