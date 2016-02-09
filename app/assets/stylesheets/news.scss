@@ -4,6 +4,7 @@
 
 .right {
     margin-top: 40px;
+
     .category-list {
         .category-item {
             position: relative;
@@ -76,5 +77,18 @@ $news-item-padding: 15px;
                 }
             }
         }
+      .btn-share{
+         float: right;
+        padding: 10px;
+        .bt-facebook{
+          background-color: #4c70ba;
+        }
+        .bt-twitter{
+          background-color: #00aced;
+        }
+
+      }
+
     }
 }
+

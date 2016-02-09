@@ -1,7 +1,6 @@
 <%= render "layouts/header" %>
 <%= render "layouts/hot_slide" %>
 <div class="container">
-  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
     <div class="left col-xs-10">
     <% @news.each do |item| %>
         <div class="news-item panel row">
@@ -44,7 +43,14 @@
                     </div>
                 </div>
             </div>
-            <div class="right-content col-xs-4"><%= link_to (holder_tag '100px150'), item %></div>
+            <div class="right-content col-xs-4">
+              <%= link_to (holder_tag '100px150'), item %>
+              <div class="btn-share">
+                <a href="#"><span class="badge bt-facebook" >Facebook</span></a>&nbsp;&nbsp;
+                <a href="#"><span class="badge bt-twitter"  >Twitter</span></a>
+              </div>
+            </div>
+
         </div>
     <% end %>
     </div>
